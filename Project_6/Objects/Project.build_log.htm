@@ -1,0 +1,208 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.35.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Stefan Gheorghe, RINF.TECH, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.35.0.2
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
+CPU DLL:         SARMCM3.DLL V5.35.0.2
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+C:\Users\StefanGheorghe\Desktop\PJ_Unknown\Project.uvprojx
+Project File Date:  09/10/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+../V4/main.c(6): warning: In file included from...
+../V4/lcd.h(152): warning: no newline at end of file [-Wnewline-eof]
+/******************************************************************************/
+                                                                                ^
+../V4/main.c(17): warning: no previous prototype for function 'initGPIO' [-Wmissing-prototypes]
+void initGPIO()
+     ^
+../V4/main.c(17): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void initGPIO()
+^
+static 
+../V4/main.c(17): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void initGPIO()
+             ^
+../V4/main.c(35): warning: declaration shadows a variable in the global scope [-Wshadow]
+    GPIO_InitTypeDef  GPIO_InitStructure;
+                      ^
+../V4/main.c(12): note: previous declaration is here
+GPIO_InitTypeDef GPIO_InitStructure;
+                 ^
+../V4/main.c(1): warning: In file included from...
+C:/Users/StefanGheorghe/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(8302): warning: In file included from...
+./RTE/Device/STM32F103RB\stm32f10x_conf.h(66): warning: In file included from...
+C:/Users/StefanGheorghe/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc\stm32f10x_i2c.h(50): warning: padding size of 'I2C_InitTypeDef' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+../V4/main.c(32): warning: no previous prototype for function 'I2C_Setup' [-Wmissing-prototypes]
+void I2C_Setup(void)
+     ^
+../V4/main.c(32): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void I2C_Setup(void)
+^
+static 
+../V4/main.c(63): warning: no previous prototype for function 'init_TMP102' [-Wmissing-prototypes]
+void init_TMP102(void)
+     ^
+../V4/main.c(63): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void init_TMP102(void)
+^
+static 
+../V4/main.c(97): warning: no previous prototype for function 'init_TC74' [-Wmissing-prototypes]
+void init_TC74(void)
+     ^
+../V4/main.c(97): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void init_TC74(void)
+^
+static 
+../V4/main.c(140): warning: implicit conversion loses integer precision: 'int' to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+    Address = Address << 1;
+            ~ ~~~~~~~~^~~~
+../V4/main.c(186): warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+                tempCelsius=temp*0.0625;
+                           ~~~~~^~~~~~~
+../V4/main.c(134): warning: no previous prototype for function 'Receive' [-Wmissing-prototypes]
+float Receive(u8 Address, u8 Register)
+      ^
+../V4/main.c(134): note: declare 'static' if the function is not intended to be used outside of this translation unit
+float Receive(u8 Address, u8 Register)
+^
+static 
+../V4/main.c(199): warning: implicit conversion loses integer precision: 'int' to 'u8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+    Address = Address<<1;
+            ~ ~~~~~~~^~~
+../V4/main.c(244): warning: implicit conversion turns floating-point number into integer: 'double' to 'int' [-Wfloat-conversion]
+                X = (int)temp*0.0625;
+                  ~ ~~~~~~~~~^~~~~~~
+../V4/main.c(192): warning: no previous prototype for function 'Receive_TC74' [-Wmissing-prototypes]
+int Receive_TC74(u8 Address, u8 Register)
+    ^
+../V4/main.c(192): note: declare 'static' if the function is not intended to be used outside of this translation unit
+int Receive_TC74(u8 Address, u8 Register)
+^
+static 
+../V4/main.c(254): warning: unused variable 'tCel1' [-Wunused-variable]
+                float tCel1=0.0;
+                      ^
+../V4/main.c(252): warning: unused variable 'i' [-Wunused-variable]
+                uint8_t i;
+                        ^
+../V4/main.c(12): warning: no previous extern declaration for non-static variable 'GPIO_InitStructure' [-Wmissing-variable-declarations]
+GPIO_InitTypeDef GPIO_InitStructure;
+                 ^
+../V4/main.c(12): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+GPIO_InitTypeDef GPIO_InitStructure;
+^
+../V4/main.c(13): warning: no previous extern declaration for non-static variable 'temp' [-Wmissing-variable-declarations]
+int temp;
+    ^
+../V4/main.c(13): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int temp;
+^
+18 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=4504 RO-data=304 RW-data=4 ZI-data=1656  
+".\Objects\Project.axf" - 0 Error(s), 18 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.8.0.pack
+                ARM.CMSIS.5.8.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.5.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.3.0.pack
+                Keil.STM32F1xx_DFP.2.3.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+   * Component: Flash Version: 3.5.0
+   * Component: Framework Version: 3.5.1
+   * Component: GPIO Version: 3.5.0
+   * Component: I2C Version: 3.5.0
+   * Component: PWR Version: 3.5.0
+   * Component: RCC Version: 3.5.0
+   * Component: RTC Version: 3.5.0
+   * Component: SPI Version: 3.5.0
+   * Component: USART Version: 3.5.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Device\STM32F103RB
+  .\RTE\_Target_1
+  C:\Users\StefanGheorghe\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
+  C:\Users\StefanGheorghe\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include
+  C:\Users\StefanGheorghe\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.5.0
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device\Source\ARM\startup_stm32f10x_md.s
+      Include file:  RTE_Driver\Config\RTE_Device.h
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+      Source file:   Device\Source\system_stm32f10x.c
+
+   * Component: Keil::Device:StdPeriph Drivers:Flash:3.5.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_flash.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_flash.c
+
+   * Component: Keil::Device:StdPeriph Drivers:Framework:3.5.1
+      Include file:  Device\StdPeriph_Driver\inc\misc.h
+      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_conf.h
+      Include file:  Device\StdPeriph_Driver\templates\stm32f10x_it.h
+      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_it.c
+      Source file:   Device\StdPeriph_Driver\src\misc.c
+
+   * Component: Keil::Device:StdPeriph Drivers:GPIO:3.5.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_gpio.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_gpio.c
+
+   * Component: Keil::Device:StdPeriph Drivers:I2C:3.5.0
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_i2c.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_i2c.h
+
+   * Component: Keil::Device:StdPeriph Drivers:PWR:3.5.0
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_pwr.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_pwr.h
+
+   * Component: Keil::Device:StdPeriph Drivers:RCC:3.5.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_rcc.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_rcc.c
+
+   * Component: Keil::Device:StdPeriph Drivers:RTC:3.5.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_rtc.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_rtc.c
+
+   * Component: Keil::Device:StdPeriph Drivers:SPI:3.5.0
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_spi.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_spi.h
+
+   * Component: Keil::Device:StdPeriph Drivers:USART:3.5.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_usart.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_usart.c
+Build Time Elapsed:  00:00:00
+</pre>
+</body>
+</html>
