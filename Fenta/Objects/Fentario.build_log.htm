@@ -1,0 +1,303 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.35.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Stefan Gheorghe, RINF.TECH, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.35.0.2
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
+CPU DLL:         SARMCM3.DLL V5.35.0.2
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+C:\Users\StefanGheorghe\Desktop\SMP\Fenta\Fentario.uvprojx
+Project File Date:  08/05/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+main.c(5): warning: no previous extern declaration for non-static variable 'special_move' [-Wmissing-variable-declarations]
+int special_move = 0;
+    ^
+main.c(5): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int special_move = 0;
+^
+main.c(12): warning: no previous extern declaration for non-static variable 'tabla' [-Wmissing-variable-declarations]
+char tabla[]={'-','-','-','-','-','-','-','-','-'};
+     ^
+main.c(12): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char tabla[]={'-','-','-','-','-','-','-','-','-'};
+^
+main.c(1): warning: In file included from...
+C:/Users/StefanGheorghe/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include\stm32f10x.h(8302): warning: In file included from...
+./RTE/Device/STM32F103RB\stm32f10x_conf.h(90): warning: In file included from...
+C:/Users/StefanGheorghe/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc\stm32f10x_usart.h(50): warning: padding size of 'USART_InitTypeDef' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+main.c(16): warning: no previous prototype for function 'initUsart' [-Wmissing-prototypes]
+void initUsart()
+     ^
+main.c(16): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void initUsart()
+^
+static 
+main.c(16): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void initUsart()
+              ^
+main.c(31): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
+void SysTick_Handler(void)
+     ^
+main.c(31): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SysTick_Handler(void)
+^
+static 
+main.c(39): warning: no previous prototype for function 'Delay' [-Wmissing-prototypes]
+void Delay(__IO uint32_t nTime)
+     ^
+main.c(39): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Delay(__IO uint32_t nTime)
+^
+static 
+main.c(47): warning: no previous prototype for function 'initGPIO' [-Wmissing-prototypes]
+void initGPIO()
+     ^
+main.c(47): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void initGPIO()
+^
+static 
+main.c(47): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void initGPIO()
+             ^
+main.c(63): warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+        n=strlen(a);
+         ~^~~~~~~~~
+main.c(60): warning: no previous prototype for function 'sendString' [-Wmissing-prototypes]
+void sendString(char a[])
+     ^
+main.c(60): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void sendString(char a[])
+^
+static 
+main.c(70): warning: no previous prototype for function 'sendChar' [-Wmissing-prototypes]
+void sendChar(char a)
+     ^
+main.c(70): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void sendChar(char a)
+^
+static 
+main.c(76): warning: no previous prototype for function 'initTimer' [-Wmissing-prototypes]
+void initTimer()
+     ^
+main.c(76): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void initTimer()
+^
+static 
+main.c(76): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void initTimer()
+              ^
+main.c(87): warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'char' [-Wimplicit-int-conversion]
+                                        chr = USART_ReceiveData(USART2);
+                                            ~ ^~~~~~~~~~~~~~~~~~~~~~~~~
+main.c(81): warning: no previous prototype for function 'readChar' [-Wmissing-prototypes]
+char readChar()
+     ^
+main.c(81): note: declare 'static' if the function is not intended to be used outside of this translation unit
+char readChar()
+^
+static 
+main.c(81): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+char readChar()
+             ^
+main.c(85): warning: variable 'chr' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+                if(USART_GetFlagStatus(USART2, USART_FLAG_RXNE) != RESET)
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c(90): note: uninitialized use occurs here
+         return chr;
+                ^~~
+main.c(85): note: remove the 'if' if its condition is always true
+                if(USART_GetFlagStatus(USART2, USART_FLAG_RXNE) != RESET)
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c(83): note: initialize the variable 'chr' to silence this warning
+        char chr;
+                ^
+                 = '\0'
+main.c(93): warning: no previous prototype for function 'afisare' [-Wmissing-prototypes]
+void afisare() 
+     ^
+main.c(93): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void afisare() 
+^
+static 
+main.c(93): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void afisare() 
+            ^
+main.c(109): warning: no previous prototype for function 'victorie' [-Wmissing-prototypes]
+_Bool victorie() 
+      ^
+main.c(109): note: declare 'static' if the function is not intended to be used outside of this translation unit
+_Bool victorie() 
+^
+static 
+main.c(109): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+_Bool victorie() 
+              ^
+main.c(171): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+                                sendChar(i+1+'0');
+                                ~~~~~~~~ ~~~^~~~
+main.c(194): warning: misleading indentation; statement is not part of the previous 'if' [-Wmisleading-indentation]
+                                if (tabla[5] =='0' && tabla[2] =='0' && tabla[8] == '-')
+                                ^
+main.c(191): note: previous statement is here
+                        else if (tabla[i] == '-')
+                        ^
+main.c(209): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+                                        sendChar(poz_of_line+1+'0');
+                                        ~~~~~~~~ ~~~~~~~~~~~~~^~~~
+main.c(241): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+                                sendChar(poz_of_line+1+'0');
+                                ~~~~~~~~ ~~~~~~~~~~~~~^~~~
+main.c(155): warning: unused variable 'random_choice' [-Wunused-variable]
+        int random_choice;
+            ^
+main.c(154): warning: unused variable 'j' [-Wunused-variable]
+        int i, j;
+               ^
+main.c(152): warning: no previous prototype for function 'Win' [-Wmissing-prototypes]
+ int Win()
+     ^
+main.c(152): note: declare 'static' if the function is not intended to be used outside of this translation unit
+ int Win()
+ ^
+ static 
+main.c(152): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+ int Win()
+        ^
+main.c(276): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+                                sendChar((random_choice+'0'));
+                                ~~~~~~~~  ~~~~~~~~~~~~~^~~~
+main.c(298): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+                                sendChar(i+1+'0');
+                                ~~~~~~~~ ~~~^~~~
+main.c(338): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+                sendChar(poz_of_line+1+'0');
+                ~~~~~~~~ ~~~~~~~~~~~~~^~~~
+main.c(371): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+                                sendChar(poz_of_line+1+'0');
+                                ~~~~~~~~ ~~~~~~~~~~~~~^~~~
+main.c(402): warning: implicit conversion loses integer precision: 'int' to 'char' [-Wimplicit-int-conversion]
+      sendChar(random_choice+1+'0');
+      ~~~~~~~~ ~~~~~~~~~~~~~~~^~~~
+main.c(264): warning: unused variable 'j' [-Wunused-variable]
+  int i, j;
+         ^
+main.c(262): warning: no previous prototype for function 'mutare0' [-Wmissing-prototypes]
+void mutare0() 
+     ^
+main.c(262): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void mutare0() 
+^
+static 
+main.c(262): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void mutare0() 
+            ^
+main.c(409): warning: no previous prototype for function 'mutareX' [-Wmissing-prototypes]
+void mutareX() 
+     ^
+main.c(409): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void mutareX() 
+^
+static 
+main.c(409): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void mutareX() 
+            ^
+main.c(10): warning: no previous extern declaration for non-static variable 'GPIO_InitStructure' [-Wmissing-variable-declarations]
+GPIO_InitTypeDef GPIO_InitStructure;
+                 ^
+main.c(10): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+GPIO_InitTypeDef GPIO_InitStructure;
+^
+main.c(11): warning: no previous extern declaration for non-static variable 'USART_InitStructure' [-Wmissing-variable-declarations]
+USART_InitTypeDef USART_InitStructure;
+                  ^
+main.c(11): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+USART_InitTypeDef USART_InitStructure;
+^
+42 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=2856 RO-data=288 RW-data=16 ZI-data=1888  
+".\Objects\Fentario.axf" - 0 Error(s), 42 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.8.0.pack
+                ARM.CMSIS.5.8.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.5.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.3.0.pack
+                Keil.STM32F1xx_DFP.2.3.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+   * Component: Flash Version: 3.5.0
+   * Component: Framework Version: 3.5.1
+   * Component: GPIO Version: 3.5.0
+   * Component: RCC Version: 3.5.0
+   * Component: USART Version: 3.5.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Device\STM32F103RB
+  .\RTE\_Target_1
+  C:\Users\StefanGheorghe\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
+  C:\Users\StefanGheorghe\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include
+  C:\Users\StefanGheorghe\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.5.0
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device\Source\ARM\startup_stm32f10x_md.s
+      Source file:   Device\Source\system_stm32f10x.c
+      Include file:  RTE_Driver\Config\RTE_Device.h
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+
+   * Component: Keil::Device:StdPeriph Drivers:Flash:3.5.0
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_flash.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_flash.h
+
+   * Component: Keil::Device:StdPeriph Drivers:Framework:3.5.1
+      Include file:  Device\StdPeriph_Driver\inc\misc.h
+      Source file:   Device\StdPeriph_Driver\src\misc.c
+      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_conf.h
+      Include file:  Device\StdPeriph_Driver\templates\stm32f10x_it.h
+      Source file:   Device\StdPeriph_Driver\templates\stm32f10x_it.c
+
+   * Component: Keil::Device:StdPeriph Drivers:GPIO:3.5.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_gpio.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_gpio.c
+
+   * Component: Keil::Device:StdPeriph Drivers:RCC:3.5.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_rcc.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_rcc.c
+
+   * Component: Keil::Device:StdPeriph Drivers:USART:3.5.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_usart.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_usart.c
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
